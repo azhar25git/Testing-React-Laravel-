@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Shoe Store</title>
+    @viteReactRefresh
     @vite(['resources/js/main.jsx'])  <!-- Changed from app.js to main.jsx -->
 </head>
 <body>
