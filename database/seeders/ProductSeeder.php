@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             [
-                'img' => '/nike.png',
+                'img' => '/assets/nike.png',
                 'brand' => 'Nike',
                 'title' => 'Air Max Running Shoes',
                 'rating' => 4.5,
@@ -30,7 +30,7 @@ class ProductSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'img' => '/puma.avif',
+                'img' => '/assets/puma.avif',
                 'brand' => 'Puma',
                 'title' => 'Suede Classic Sneakers',
                 'rating' => 4.2,
@@ -44,7 +44,7 @@ class ProductSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'img' => '/kids.jpg',
+                'img' => '/assets/kids.jpg',
                 'brand' => 'Orion',
                 'title' => 'Kid\'s School Shoes',
                 'rating' => 4.5,
