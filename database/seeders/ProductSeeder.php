@@ -43,6 +43,20 @@ class ProductSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'img' => '/kids.jpg',
+                'brand' => 'Orion',
+                'title' => 'Kid\'s School Shoes',
+                'rating' => 4.5,
+                'reviews' => 89,
+                'sellPrice' => 2499.00,
+                'orders' => '195',
+                'mrp' => '2999.00',
+                'discount' => 30,
+                'category' => 'child',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
