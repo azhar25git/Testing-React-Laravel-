@@ -8,6 +8,7 @@ import { useWishList } from '../context/WishListContext';
 import { useCart } from '../context/CartContext';
 
 const ProductDetails = () => {
+    const ReactStarsComponent = ReactStars.default || ReactStars;
     // Destructure context values for wishlist and cart operations
     const { toggleItemWishList, list } = useWishList();
     const { toggleItemCart, cartList } = useCart();
@@ -108,7 +109,7 @@ const ProductDetails = () => {
                                         {/* Product rating */}
                                         <p className='flex items-center'>
                                             {product.rating}
-                                            <ReactStars
+                                            <ReactStarsComponent
                                                 count={5}                // Total number of stars
                                                 value={product.rating}   // Rating value (fractional)
                                                 size={24}                // Size of each star
