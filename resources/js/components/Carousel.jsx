@@ -1,9 +1,9 @@
-import React from 'react'
-import Slider from "react-slick";
+import { default as Slider } from "react-slick";
 import { arr } from "../assets/imageExport"
 
 
 const Carousel = () => {
+    const SliderComponent = Slider.default || Slider;
     var settings = {
         infinite: true,
         slidesToShow: 1,
@@ -16,25 +16,19 @@ const Carousel = () => {
     };
     return (
         <div className='max-w-[90%] mx-auto'>
-            <Slider {...settings}>
-                <div>
-                    <img src={arr[0]} alt="slides" />
-                </div>
-                <div>
-                    <img src={arr[1]} alt="slides" />
-                </div>
-                <div>
-                    <img src={arr[2]} alt="slides" />
-                </div>
-                <div>
-                    <img src={arr[3]} alt="slides" />
-                </div>
-                <div>
-                    <img src={arr[4]} alt="slides" />
-                </div>
-            </Slider>
+            <SliderComponent {...settings}>
+                {arr.map((image, index) => (
+                    <div key={index}>
+                        <img 
+                            src={image} 
+                            alt={`Slide ${index + 1}`} 
+                            className="w-full h-auto" 
+                        />
+                    </div>
+                ))}
+            </SliderComponent>
         </div>
-    )
+    );
 }
 
 export default Carousel
