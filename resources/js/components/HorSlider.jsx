@@ -19,12 +19,12 @@ const HorSlider = ({ product, home }) => {
                     {/* Button to toggle wishlist status */}
                     <button
                         onClick={() => {
-                            toggleItemWishList(product._id);
+                            toggleItemWishList(product.id);
                         }}
                         className="z-10 w-4 h-4 absolute left-1 top-0"
                     >
                         {
-                            list.includes(product._id) ? "❤️" : "🤍" // Display heart icon based on wishlist status
+                            list.includes(product.id) ? "❤️" : "🤍" // Display heart icon based on wishlist status
                         }
                     </button>
                     {/* Best Seller Badge */}
@@ -37,7 +37,7 @@ const HorSlider = ({ product, home }) => {
 
                 {/* Product image */}
                 <div className="xs:h-2/3 sm:h-1/2 md:h-2/3 md:w-5/6 xs:text-sm md:text-base flex items-center ">
-                    <Link to={`/product-details/${product._id}`}>
+                    <Link to={`/product-details/${product.id}`}>
                         <img src={img} alt={title} />
                     </Link>
                 </div>
